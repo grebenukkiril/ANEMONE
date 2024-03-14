@@ -1,4 +1,9 @@
-@each $sectionTitle in about{
+@import 
+'./mixin',
+'./plaseholder',
+'./vars',
+'./keyframes';
+@each $sectionTitle in about, store{
     .#{$sectionTitle}__title{
         font-size: 44px;
         font-style: normal;

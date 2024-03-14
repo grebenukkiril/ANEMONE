@@ -1,0 +1,62 @@
+.store {
+    margin-bottom: 100px;
+    &__content {
+        @include displayFlex ($alignItems: center, $justifyContent: center, $gap: 26px, $flexDirection: column);
+    }
+    &__list {
+        @include displayGrid ($gridTemplateColumns: repeat(2, 600px), $gridTemplateRows:repeat(2, 640px), $rowGap: 64px, $columnGap: 32px);
+        padding-bottom: 34px;
+    }
+    &__options {
+        @include displayFlex ($alignItems: flex-start, $justifyContent: center, $gap: 4px, $flexDirection: column);
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        height: auto;
+        padding-bottom: 12px;
+    }
+    &__options-name {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        position: relative;
+        width: 100%;
+        &::before{
+            content: " ";
+            height: 1px;
+            width: 340px;
+            background-color: $blackColor;
+            position: absolute;
+            right: 0;
+            top: 49.5%;
+        }
+        &:nth-child(2)::before{
+            width: 298px;
+        }
+        &:nth-child(3)::before{
+            width: 286px;
+        }
+        &:nth-child(4)::before{
+            width: 299px;
+        }
+    }
+    &__options-price {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    opacity: 0.6;
+    }
+    &__btn{
+        color: $whiteColor;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 20px 43px;
+        border-radius: 38px;
+        background-color: $pinkColor;
+    }
+}

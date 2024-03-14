@@ -9,3 +9,10 @@
     gap: $gap;
     flex-direction: $flexDirection;
 }
+@mixin displayGrid ($gridTemplateColumns, $gridTemplateRows, $rowGap, $columnGap){
+    display: grid;
+    grid-template-columns: $gridTemplateColumns;
+    grid-template-rows: $gridTemplateRows;
+    row-gap: $rowGap;
+    column-gap: $columnGap;
+}
