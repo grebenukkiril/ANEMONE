@@ -1,4 +1,4 @@
-.menu__item, .logo, .header__phone-link {
+.about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,8 +56,22 @@ button {
   margin: 0;
 }
 
+.container {
+  width: 1280px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
 .header {
   padding-top: 28px;
+  margin-bottom: 64px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-direction: row;
 }
 .header__phone-link:hover {
   animation: headerHoverTelAnimation 400ms 3;
@@ -66,8 +80,8 @@ button {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
+  justify-content: center;
+  gap: 0;
   flex-direction: row;
 }
 
@@ -98,4 +112,97 @@ button {
 }
 .menu__link:hover {
   transform: scale(1.1);
+}
+
+.hero {
+  background-image: url(../image/hero/image_hero_page.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 390px 636px;
+  margin-bottom: 100px;
+}
+.hero__content {
+  gap: 140px;
+  flex-direction: column;
+  color: #000;
+  padding-top: 228px;
+}
+.hero__title {
+  text-align: center;
+  font-size: 160px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+}
+.hero__title::before {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 58px;
+  background-color: #000;
+  position: absolute;
+  right: 22px;
+  top: 17px;
+}
+
+.hero-bg-decoration {
+  gap: 610px;
+  flex-direction: row;
+}
+.hero-bg-decoration__subtitle {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 166px;
+  text-align: right;
+}
+.hero-bg-decoration__img {
+  src: url(.././image/bouquet1.png);
+}
+
+@media (max-width: 992px) {
+  .hero-bg-decoration__img {
+    src: url(.././image/bouquet1.png);
+  }
+}
+.about {
+  margin-bottom: 100px;
+}
+.about__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+  flex-direction: column;
+}
+.about__title {
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-direction: row;
+  width: 100%;
+}
+.about__title::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+.about__information {
+  gap: 90px;
+  flex-direction: row;
+}
+.about__text {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 510px;
 }

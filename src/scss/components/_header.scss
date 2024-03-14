@@ -1,5 +1,9 @@
 .header {
     padding-top: 28px;
+    margin-bottom: 64px;
+    &__inner{
+        @include displayFlex ($alignItems: center, $justifyContent: space-between, $gap: 48px, $flexDirection: row);
+    }
     &__phone-link {
         @extend %flexCenter;
         &:hover{
@@ -8,7 +12,7 @@
     }
 }
 .navigation {
-    @include displayFlex ($alignItems: center, $justifyContent: space-between, $gap: 48px, $flexDirection: row);
+    @include displayFlex ($alignItems: center, $justifyContent: center, $gap: 0, $flexDirection: row);
 }
 .logo {
     width: 72px;

@@ -28,8 +28,15 @@ button{
     border: none;
     margin: 0;
 }
+.container{
+    width: 1280px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
 
 // components
 @import 
-'./components/_header.scss';
+'./components/header.scss',
+'./components/hero',
+'./components/about';
 

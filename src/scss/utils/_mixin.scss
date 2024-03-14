@@ -5,3 +5,7 @@
     gap: $gap;
     flex-direction: $flexDirection;
 }
+@mixin settingsFlexCenter ($gap: 0, $flexDirection: row){
+    gap: $gap;
+    flex-direction: $flexDirection;
+}

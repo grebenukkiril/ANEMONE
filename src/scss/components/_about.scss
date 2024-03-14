@@ -1,0 +1,18 @@
+.about {
+    margin-bottom: 100px;
+    &__content {
+        @include displayFlex ($alignItems: flex-start, $justifyContent: center, $gap: 26px, $flexDirection: column);
+    }
+    &__information {
+        @extend %flexCenter;
+        @include settingsFlexCenter ($gap: 90px, $flexDirection: row);
+    }
+    &__text {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 510px;
+    }
+    &__image {}
+}

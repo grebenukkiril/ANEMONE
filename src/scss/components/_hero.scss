@@ -1,0 +1,55 @@
+.hero {
+    background-image: url(../image/hero/image_hero_page.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 390px 636px;
+    margin-bottom: 100px;
+    &__content {
+        @extend %flexCenter;
+        @include settingsFlexCenter ($gap: 140px, $flexDirection: column);
+        color: $blackColor;
+        padding-top: 228px;
+    }
+    &__title {
+        text-align: center;
+        font-size: 160px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            height: 7px;
+            width: 58px;
+            background-color: $blackColor;
+            position: absolute;
+            right: 22px;
+            top: 17px;
+        }
+    }
+}
+.hero-bg-decoration {
+    @extend %flexCenter;
+    @include settingsFlexCenter ($gap: 610px, $flexDirection: row);
+    &__subtitle {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 166px;
+        text-align: right;
+    }
+    &__img {
+        src: url(.././image/bouquet1.png);
+    }
+    // &__svg {}
+}
+@media(max-width: 992px) {
+    .hero-bg-decoration {
+        &__img {
+            src: url(.././image/bouquet1.png);
+        }
+        // &__svg {}
+    }
+}
