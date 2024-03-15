@@ -1,4 +1,4 @@
-.about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
+.order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +68,26 @@
   background-color: #000;
 }
 
-.about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
+.delivery__title {
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-direction: row;
+  width: 100%;
+}
+.delivery__title::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,4 +352,61 @@ button {
   padding: 20px 43px;
   border-radius: 38px;
   background-color: #E86F54;
+}
+
+.delivery {
+  padding-bottom: 391px;
+  background-image: url(../image/delivery/bg-delivery.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 391px;
+}
+.delivery__content {
+  gap: 80px;
+  flex-direction: column;
+}
+
+.order-instructions-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  flex-direction: column;
+  margin-bottom: 69px;
+}
+.order-instructions-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-direction: row;
+}
+.order-instructions-list__item::before {
+  content: "1";
+  padding: 16px 27px;
+  border: 1px solid #000;
+  border-radius: 33px;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.order-instructions-list__item:nth-child(2)::before {
+  padding: 16px 25px 16px 24px;
+  content: "2";
+}
+.order-instructions-list__item:nth-child(3)::before {
+  padding: 16px 25px 16px 24px;
+  content: "3";
+}
+.order-instructions-list__item:nth-child(4)::before {
+  padding: 16px 23px;
+  content: "4";
+}
+.order-instructions-list__text {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 855px;
 }
