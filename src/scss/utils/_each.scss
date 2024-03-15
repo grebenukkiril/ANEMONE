@@ -21,6 +21,8 @@
 }
 @each $sectionBtn in store, blog{
     .#{$sectionBtn}__btn{
+
+        
         color: $whiteColor;
         font-size: 28px;
         font-style: normal;
