@@ -1,9 +1,10 @@
 .delivery {
     padding-bottom: 391px;
-    background-image: url(../image/delivery/bg-delivery.png);
+    background-image: url(../image/delivery/bg-delivery@2x.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 391px;
+    margin-bottom: 100px;
     &__content {
         @extend %flexCenter;
         @include settingsFlexCenter ($gap: 80px, $flexDirection: column);

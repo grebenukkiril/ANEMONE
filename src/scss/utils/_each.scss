@@ -3,7 +3,7 @@
 './plaseholder',
 './vars',
 './keyframes';
-@each $sectionTitle in about, store, delivery {
+@each $sectionTitle in about, store, delivery, blog {
     .#{$sectionTitle}__title{
         font-size: 44px;
         font-style: normal;
@@ -17,5 +17,17 @@
             height: 1px;
             background-color: $blackColor;
         }
+    }
+}
+@each $sectionBtn in store, blog{
+    .#{$sectionBtn}__btn{
+        color: $whiteColor;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 20px 43px;
+        border-radius: 38px;
+        background-color: $pinkColor;
     }
 }
