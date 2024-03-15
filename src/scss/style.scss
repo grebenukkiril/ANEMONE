@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6, li, menu, p {
 button{
     border: none;
     margin: 0;
+    background-color: #ffffff00;
 }
 .container{
     width: 1280px;
@@ -41,5 +42,6 @@ button{
 './components/about',
 './components/store',
 './components/delivery',
-'./components/blog';
+'./components/blog',
+'./components/contact-modal';
 
