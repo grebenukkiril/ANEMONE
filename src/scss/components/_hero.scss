@@ -40,16 +40,33 @@
         width: 166px;
         text-align: right;
     }
-    &__img {
-        src: url(.././image/bouquet1.png);
+    &__svg {
+        width:166px; 
+        height: 166px;
     }
-    // &__svg {}
 }
-@media(max-width: 992px) {
-    .hero-bg-decoration {
-        &__img {
-            src: url(.././image/bouquet1.png);
+
+@media (max-width: 1024px) {
+    .hero{
+        &__title{
+            font-size: 120px;
+            &::before{
+                display: none;
+            }
         }
-        // &__svg {}
+        &__content{
+            gap: 172px;
+        }
+    }
+    .hero-bg-decoration {
+        gap: 450px;
+        &__subtitle{
+            font-size: 24px;
+            width: 145px;
+        }
+        &__svg{
+            width: 145px;
+            height: 150px;
+        }
     }
 }
