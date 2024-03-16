@@ -1,4 +1,4 @@
-.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
+.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +128,7 @@
   background-color: #E86F54;
 }
 
-.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__phone-link {
+.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,6 +170,12 @@ a {
   color: inherit;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -201,11 +207,41 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 0;
   flex-direction: row;
 }
-.header__phone-link:hover {
+.header__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14;
+  flex-direction: row;
+}
+.header__phone-btn:hover {
   animation: headerHoverTelAnimation 400ms 3;
+}
+.header__burger-btn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: none;
+  z-index: 50;
+}
+.header__burger-span {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  transition: background-color 300ms, top 290ms, transform 290ms;
+}
+.header__burger-span:nth-child(2) {
+  width: 12px;
+  top: 11px;
+}
+.header__burger-span:nth-child(3) {
+  top: 18px;
 }
 
 .navigation {
@@ -231,6 +267,7 @@ button {
   justify-content: center;
   gap: 48px;
   flex-direction: row;
+  transition: top 300ms;
 }
 .menu__link {
   width: 100%;
@@ -245,6 +282,56 @@ button {
   transform: scale(1.1);
 }
 
+.header.burger-menu-active .menu {
+  top: 0;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    gap: 24px;
+  }
+  .header {
+    padding-top: 24px;
+  }
+  .header__phone-svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
+    position: absolute;
+    flex-direction: column;
+    gap: 26px;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #E86F54;
+  }
+  .menu__link {
+    color: #fff;
+  }
+  .header {
+    padding: 16px;
+  }
+  .header__burger-btn {
+    display: block;
+  }
+  .header.burger-menu-active .header__burger-span {
+    background-color: #fff;
+    top: 11px;
+  }
+  .header.burger-menu-active .header__burger-span:nth-child(2) {
+    display: none;
+  }
+  .header.burger-menu-active .header__burger-span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .header.burger-menu-active .header__burger-span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
 .hero {
   background-image: url(../image/hero/image_hero_page.png);
   background-repeat: no-repeat;
@@ -520,6 +607,10 @@ button {
   top: 24px;
   right: 24px;
 }
+.contact-modal__close-btn-svg {
+  width: 24px;
+  height: 24px;
+}
 .contact-modal__title {
   font-size: 32px;
   font-style: normal;
@@ -555,6 +646,13 @@ button {
   line-height: normal;
   padding: 16px;
   width: 100%;
+  border-radius: 4px;
+  border: 1px solid #D7D7D7;
+  transition: all 250ms;
+}
+.contact-modal__input:focus {
+  outline: none;
+  border: 1px solid #000;
 }
 .contact-modal__input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.4);
@@ -581,4 +679,32 @@ button {
   top: 0;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 500px) {
+  .contact-modal {
+    width: 272px;
+    padding: 28px 16px;
+    gap: 14px;
+  }
+  .contact-modal__title {
+    font-size: 30px;
+  }
+  .contact-modal__text {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .contact-modal__close-btn-svg, .contact-modal__close-btn {
+    width: 18px;
+    height: 18px;
+  }
+  .contact-modal__close-btn {
+    top: 24px;
+    right: 24px;
+  }
+  .contact-modal__btn {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px 102px 10px 101px;
+  }
 }
