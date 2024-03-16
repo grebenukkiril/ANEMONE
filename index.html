@@ -23,7 +23,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__inner">
+        <div class="container-lg header__inner">
             <a class="logo" href="#">
                 <svg class="logo__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="72" height="57" viewBox="0 0 32 32">
                     <title>logo</title>
@@ -51,15 +51,22 @@
                     </li>
                 </ul>
             </nav>
-            <button class="header__phone-link" id="open-contact-modal">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <title>tel</title>
-                    <path d="M26.332 6.267l-3.347-3.344c-0.409-0.409-0.955-0.638-1.534-0.638s-1.125 0.226-1.534 0.638l-3.605 3.598c-0.409 0.409-0.638 0.958-0.638 1.537 0 0.581 0.226 1.125 0.638 1.537l2.816 2.819c-0.642 1.495-1.563 2.852-2.715 4-1.153 1.16-2.502 2.074-3.998 2.721l-2.816-2.819c-0.409-0.408-0.955-0.638-1.534-0.638-0.285-0.001-0.568 0.055-0.831 0.164s-0.502 0.271-0.703 0.473l-3.608 3.598c-0.409 0.408-0.638 0.958-0.638 1.537 0 0.581 0.226 1.125 0.638 1.537l3.344 3.344c0.698 0.698 1.659 1.097 2.646 1.097 0.204 0 0.402-0.016 0.603-0.050 4.161-0.685 8.291-2.9 11.625-6.232 3.331-3.337 5.544-7.466 6.235-11.63 0.198-1.182-0.198-2.398-1.047-3.249zM25.15 9.143c-0.613 3.705-2.605 7.401-5.607 10.402s-6.694 4.993-10.4 5.606c-0.465 0.078-0.943-0.078-1.282-0.415l-3.284-3.284 3.482-3.485 3.793 3.799 0.679-0.251c2.058-0.757 3.928-1.952 5.478-3.503s2.745-3.42 3.501-5.479l0.251-0.679-3.797-3.793 3.482-3.485 3.284 3.284c0.339 0.339 0.497 0.817 0.418 1.282z"></path>
-                </svg>
-            </button>
+            <div class="header__btn-wrapper">
+                <button class="header__phone-btn" id="open-contact-modal">
+                    <svg class="header__phone-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+                        <title>tel</title>
+                        <path d="M26.332 6.267l-3.347-3.344c-0.409-0.409-0.955-0.638-1.534-0.638s-1.125 0.226-1.534 0.638l-3.605 3.598c-0.409 0.409-0.638 0.958-0.638 1.537 0 0.581 0.226 1.125 0.638 1.537l2.816 2.819c-0.642 1.495-1.563 2.852-2.715 4-1.153 1.16-2.502 2.074-3.998 2.721l-2.816-2.819c-0.409-0.408-0.955-0.638-1.534-0.638-0.285-0.001-0.568 0.055-0.831 0.164s-0.502 0.271-0.703 0.473l-3.608 3.598c-0.409 0.408-0.638 0.958-0.638 1.537 0 0.581 0.226 1.125 0.638 1.537l3.344 3.344c0.698 0.698 1.659 1.097 2.646 1.097 0.204 0 0.402-0.016 0.603-0.050 4.161-0.685 8.291-2.9 11.625-6.232 3.331-3.337 5.544-7.466 6.235-11.63 0.198-1.182-0.198-2.398-1.047-3.249zM25.15 9.143c-0.613 3.705-2.605 7.401-5.607 10.402s-6.694 4.993-10.4 5.606c-0.465 0.078-0.943-0.078-1.282-0.415l-3.284-3.284 3.482-3.485 3.793 3.799 0.679-0.251c2.058-0.757 3.928-1.952 5.478-3.503s2.745-3.42 3.501-5.479l0.251-0.679-3.797-3.793 3.482-3.485 3.284 3.284c0.339 0.339 0.497 0.817 0.418 1.282z"></path>
+                    </svg>
+                </button>
+                <button class="header__burger-btn" id="burger">
+                    <span class="header__burger-span"></span>
+                    <span class="header__burger-span"></span>
+                    <span class="header__burger-span"></span>
+                </button>
+            </div>
         </div>
     </header>
-    
+<!--     
     <main class="main">
         <section class="hero" id="anemone">
             <div class="container hero__content">
@@ -166,11 +173,8 @@
         <section class="blog" id="blog">
             <div class="container blog__content">
                 <h2 class="blog__title">BLOG</h2>
-                <!-- Slider main container -->
                 <div class="swiper blog__slider">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper blog__slider-wrapper">
-                    <!-- Slides -->
                         <div class="swiper-slide blog__slider-slide">
                             <img class="blog__slider-image" src="./src/image/blog/flowers-image2.png" srcset="./src/image/blog/flowers-image2@2x.png" alt="blog image">
                         </div>
@@ -189,14 +193,7 @@
                         <div class="swiper-slide blog__slider-slide">
                             <img class="blog__slider-image" src="./src/image/blog/flowers-image1-3.png" srcset="./src/image/blog/flowers-image1@2x-3.png" alt="blog image">
                         </div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <!-- <div class="swiper-pagination"></div> -->
-                
-                    <!-- If we need navigation buttons -->
-                    
-                    <!-- If we need scrollbar -->
-                    <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>>
                     <div class="swiper-button-prev blog__button-prev"></div>
                     <div class="swiper-button-next blog__button-next"></div>
                 </div>
@@ -204,7 +201,7 @@
                 <a class="blog__btn" href="#">Subscribe</a>
             </div>
         </section>
-    </main>
+    </main> -->
     
     <footer class="footer">
         <div class="footer__inner container">
@@ -216,9 +213,9 @@
     <div class="contact-modal-wrapper" id="contact-modal-wrapper">
         <form class="contact-modal">
             <button class="contact-modal__close-btn" id="close-contact-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 4L4 20M20 20L4 4L20 20Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+                <svg class="contact-modal__close-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 3L3 15M15 15L3 3L15 15Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
             </button>
             <h2 class="contact-modal__title">Contact us</h2>
             <p class="contact-modal__text">If you have any additional questions or you want to clarify something before you make an order please fill in your contact details. We will call you back.</p>
@@ -248,5 +245,6 @@
     <!-- scripts -->
     <script src="./src/js/swiper.js"></script>
     <script src="./src/js/contact-modal.js"></script>
+    <script src="./src/js/burger-menu.js"></script>
 </body>
 </html>
