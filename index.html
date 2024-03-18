@@ -23,7 +23,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container-lg header__inner">
+        <div class="container-md header__inner">
             <a class="logo" href="#">
                 <svg class="logo__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="72" height="57" viewBox="0 0 32 32">
                     <title>logo</title>
@@ -69,7 +69,7 @@
     
     <main class="main">
         <section class="hero" id="anemone">
-            <div class=".container-lg hero__content">
+            <div class=".container-md hero__content">
                 <div class="hero-bg-decoration">
                     <h3 class="hero-bg-decoration__subtitle">flower studio</h3>
                     <svg class="hero-bg-decoration__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="166" height="166" viewBox="0 0 32 32">
@@ -112,19 +112,22 @@
                 <h1 class="hero__title">ANEMONE</h1>
             </div>
         </section>
-        <!-- <section class="about" id="about">
-            <div class="container about__content">
+        <section class="about" id="about">
+            <div class="container-md about__content">
                 <h2 class="about__title">ABOUT</h2>
                 <div class="about__information">
                     <p class="about__text">
                         We are a minimalistic flower studio. We love people and flowers. Therefore, every day we give people the beauty and joy creating stylish and modern masterpieces. Every bouquet we create is unique as you are.
                     </p>
-                    <img class="about__image" src="./src/image/about/image_about.png" srcset="./src/image/about/image_about@2x.png 2x" alt="">
+                    <picture>
+                        <source type="image/webp" class="about__image" srcset="./src/image/about/image_about.webp 1x, ./src/image/about/image_about@2x.webp 2x">
+                        <img class="about__image" src="./src/image/about/image_about.png" srcset="./src/image/about/image_about@2x.png 2x" alt="about image">
+                    </picture>
                 </div>
             </div>
         </section>
-        <section class="store" id="store">
-            <div class="container store__content">
+        <!-- <section class="store" id="store">
+            <div class="container-lg store__content">
                 <h2 class="store__title">STORE</h2>
                 <div class="store__list">
                     <div class="store__options">

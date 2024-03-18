@@ -504,6 +504,59 @@ button {
   width: 510px;
 }
 
+@media (max-width: 1400px) {
+  .about__image {
+    width: 506px;
+    height: 275px;
+  }
+}
+@media (max-width: 1200px) {
+  .about__image {
+    width: 442px;
+    height: 241px;
+  }
+  .about__text {
+    width: 484px;
+  }
+  .about__information {
+    gap: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .about__text {
+    width: 322px;
+    font-size: 20px;
+  }
+  .about__image {
+    width: 344px;
+    height: 217px;
+  }
+  .about__information {
+    gap: 54px;
+  }
+}
+@media (max-width: 991px) and (min-width: 720px) {
+  .about__information {
+    gap: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .about__text {
+    width: 100%;
+    font-size: 16px;
+  }
+  .about__content {
+    align-items: center;
+  }
+  .about__image {
+    width: 98%;
+    height: auto;
+  }
+  .about__information {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
 .store {
   margin-bottom: 100px;
 }
