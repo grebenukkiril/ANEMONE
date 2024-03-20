@@ -267,7 +267,7 @@ button {
   justify-content: center;
   gap: 48px;
   flex-direction: row;
-  transition: top 600ms;
+  transition: top 600ms opacity 300ms;
 }
 .menu__link {
   width: 100%;
@@ -284,6 +284,7 @@ button {
 
 .header.burger-menu-active .menu {
   top: 0;
+  opacity: 0;
 }
 
 @media (max-width: 991px) {
@@ -310,6 +311,7 @@ button {
     height: 100vh;
     background-color: #E86F54;
     z-index: 10;
+    opacity: 1;
   }
   .menu__link {
     color: #fff;
