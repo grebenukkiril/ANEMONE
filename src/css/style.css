@@ -284,6 +284,7 @@ button {
 
 .header.burger-menu-active .menu {
   top: 0;
+  opacity: 1;
 }
 
 @media (max-width: 991px) {
@@ -310,6 +311,7 @@ button {
     height: 100vh;
     background-color: #E86F54;
     z-index: 10;
+    opacity: 0;
   }
   .menu__link {
     color: #fff;
