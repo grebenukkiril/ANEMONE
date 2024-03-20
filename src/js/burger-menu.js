@@ -1,5 +1,5 @@
-let burgerBtn = document.getElementById('burger');
-let headerVar = document.querySelector('header');
+const burgerBtn = document.getElementById('burger');
+const headerVar = document.querySelector('header');
 
 burgerBtn.addEventListener( 'click', () => {
     if (headerVar.classList.contains('burger-menu-active') === false){

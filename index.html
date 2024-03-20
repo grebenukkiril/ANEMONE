@@ -172,36 +172,54 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <section class="blog" id="blog">
-            <div class="container blog__content">
+            <div class="container-xl blog__content">
                 <h2 class="blog__title">BLOG</h2>
                 <div class="swiper blog__slider">
                     <div class="swiper-wrapper blog__slider-wrapper">
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image2.png" srcset="./src/image/blog/flowers-image2@2x.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image2.webp 1x, /src/image/blog/flowers-image2@2x.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image2.png" srcset="./src/image/blog/flowers-image2@2x.png 2x" alt="blog image">
+                            </picture>
                         </div>
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image1.png" srcset="./src/image/blog/flowers-image1@2x.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image1.webp 1x, /src/image/blog/flowers-image1@2x.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image1.png" srcset="./src/image/blog/flowers-image1@2x.png 2x" alt="blog image">
+                            </picture>
                         </div>
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image3.png" srcset="./src/image/blog/flowers-image3@2x.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image3.webp 1x, /src/image/blog/flowers-image3@2x.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image3.png" srcset="./src/image/blog/flowers-image3@2x.png 2x" alt="blog image">
+                            </picture>
                         </div>
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image1-1.png" srcset="./src/image/blog/flowers-image1@2x-1.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image1-1.webp 1x, /src/image/blog/flowers-image1@2x-1.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image1-1.png" srcset="./src/image/blog/flowers-image1@2x-1.png 2x" alt="blog image">
+                            </picture>
                         </div>
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image1-2.png" srcset="./src/image/blog/flowers-image1@2x-2.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image1-2.webp 1x, /src/image/blog/flowers-image1@2x-2.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image1-2.png" srcset="./src/image/blog/flowers-image1@2x-2.png 2x" alt="blog image">
+                            </picture>
                         </div>
                         <div class="swiper-slide blog__slider-slide">
-                            <img class="blog__slider-image" src="./src/image/blog/flowers-image1-3.png" srcset="./src/image/blog/flowers-image1@2x-3.png" alt="blog image">
+                            <picture>
+                                <source type="image/webp" class="blog__slider-image" srcset="/src/image/blog/flowers-image1-3.webp 1x, /src/image/blog/flowers-image1@2x-3.webp 2x">
+                                <img class="blog__slider-image" src="./src/image/blog/flowers-image1-3.png" srcset="./src/image/blog/flowers-image1@2x-3.png 2x" alt="blog image">
+                            </picture>
                         </div>
-                    </div>>
+                    </div>
                     <div class="swiper-button-prev blog__button-prev"></div>
                     <div class="swiper-button-next blog__button-next"></div>
                 </div>
                 <h3 class="blog__subtitle">Follow to our newsletter</h3>
-                <a class="blog__btn" href="#">Subscribe</a>
+                <button class="blog__btn" id="open-blog-modal">Subscribe</button>
             </div>
         </section>
     </main>
@@ -210,7 +228,7 @@
         <div class="footer__inner container">
 
         </div>
-    </footer> -->
+    </footer>
 
     <!-- Contact modal -->
     <div class="contact-modal-wrapper" id="contact-modal-wrapper">
@@ -218,7 +236,7 @@
             <button class="contact-modal__close-btn" id="close-contact-modal">
                 <svg class="contact-modal__close-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
                     <path d="M15 3L3 15M15 15L3 3L15 15Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
+                </svg>
             </button>
             <h2 class="contact-modal__title">Contact us</h2>
             <p class="contact-modal__text">If you have any additional questions or you want to clarify something before you make an order please fill in your contact details. We will call you back.</p>
@@ -235,7 +253,25 @@
     </div>
 
 
-
+    <!-- Blog modal -->
+    <div class="blog-modal-wrapper" id="blog-modal-wrapper">
+        <form class="blog-modal">
+           <div class="blog-modal__inner">
+                <button class="blog-modal__close-btn" id="close-blog-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 4L4 20M20 20L4 4L20 20Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h2 class="blog-modal__title">Follow to our newsletter</h2>
+                <p class="blog-modal__text">Be the first  to get exclusive offers and the latest  news on our product directly in your box.</p>
+                <label class="blog-modal__input-wrapper" for="blog-email">
+                    Email
+                    <input class="blog-modal__input" id="blog-email"  placeholder="Your email" type="email" required>
+                </label>
+                <button class="blog-modal__btn" type="submit">Subscribe</button>
+            </form>
+           </div>
+    </div>
 
 
     <!-- Bootstrap, Popper-->
@@ -248,6 +284,7 @@
     <!-- scripts -->
     <script src="./src/js/swiper.js"></script>
     <script src="./src/js/contact-modal.js"></script>
+    <script src="./src/js/blog-modal.js"></script>
     <script src="./src/js/burger-menu.js"></script>
 </body>
 </html>

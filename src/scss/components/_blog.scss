@@ -3,6 +3,7 @@
     &__content { 
         @extend %flexCenter;
         @include settingsFlexCenter ($gap: 44px, $flexDirection: column);
+        padding: 0;
     }
     &__slider {
         margin-top: 78px;
@@ -36,6 +37,8 @@
 .swiper-button-prev {
     &::after{
         content: url(../icomoon/SVG/arrow-left.svg);
+        width: 96px;
+        height: 64px;
     }
     width: 96px;
     height: 64px;
@@ -43,6 +46,8 @@
 .swiper-button-next {
     &::after{
         content: url(../icomoon/SVG/arrow-right.svg);
+        width: 96px;
+        height: 64px;
     }
     width: 96px;
     height: 64px;

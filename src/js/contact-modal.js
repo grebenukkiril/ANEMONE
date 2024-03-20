@@ -1,6 +1,6 @@
-let contactModalOpenBtn = document.getElementById('open-contact-modal');
-let contactModalWrapper = document.getElementById('contact-modal-wrapper');
-let closeContactModal = document.getElementById('close-contact-modal');
+const contactModalOpenBtn = document.getElementById('open-contact-modal');
+const contactModalWrapper = document.getElementById('contact-modal-wrapper');
+const closeContactModal = document.getElementById('close-contact-modal');
 
 contactModalOpenBtn.addEventListener('click', ()=>{
     contactModalWrapper.classList.add('active');

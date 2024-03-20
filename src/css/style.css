@@ -1,4 +1,4 @@
-.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
+.blog-modal__inner, .blog-modal-wrapper, .contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +128,7 @@
   background-color: #E86F54;
 }
 
-.contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
+.blog-modal__inner, .blog-modal-wrapper, .contact-modal-wrapper, .blog__slider-slide, .blog__content, .order-instructions-list__item::before, .delivery__content, .about__information, .hero-bg-decoration, .hero__content, .menu__item, .logo, .header__burger-btn, .header__phone-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,7 +304,7 @@ button {
     position: absolute;
     flex-direction: column;
     gap: 26px;
-    top: -100%;
+    top: -200%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -687,6 +687,7 @@ button {
 .blog__content {
   gap: 44px;
   flex-direction: column;
+  padding: 0;
 }
 .blog__slider {
   margin-top: 78px;
@@ -720,6 +721,8 @@ button {
 }
 .swiper-button-prev::after {
   content: url(../icomoon/SVG/arrow-left.svg);
+  width: 96px;
+  height: 64px;
 }
 
 .swiper-button-next {
@@ -728,6 +731,8 @@ button {
 }
 .swiper-button-next::after {
   content: url(../icomoon/SVG/arrow-right.svg);
+  width: 96px;
+  height: 64px;
 }
 
 .contact-modal-wrapper {
@@ -858,4 +863,109 @@ button {
     margin-top: 10px;
     padding: 10px 102px 10px 101px;
   }
+}
+.blog-modal-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: -200%;
+  z-index: 50;
+  opacity: 0;
+  transition: left 300ms, opacity 1000ms;
+}
+
+.blog-modal-active {
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.blog-modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  padding: 111px 40px 112px 468px;
+  background-color: #fff;
+  position: relative;
+  background-image: url(../image/blog-modal/blog-modal-image.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.blog-modal__close-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.blog-modal__inner {
+  gap: 24px;
+  flex-direction: column;
+  width: 352px;
+}
+.blog-modal__title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.blog-modal__text {
+  color: #5C5C5C;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin: 0 8px 8px 8px;
+}
+.blog-modal__input-wrapper {
+  color: #5C5C5C;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 8px 4px 8px;
+}
+.blog-modal__input {
+  padding: 16px 12px;
+  width: 100%;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  transition: all 250ms;
+}
+.blog-modal__input:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+.blog-modal__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.blog-modal__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.blog-modal__btn {
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 14px 122px;
+  background-color: #E86F54;
 }
