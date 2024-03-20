@@ -52,7 +52,7 @@
 }
 .menu {
     @include displayFlex ($alignItems: center, $justifyContent: center, $gap: 48px, $flexDirection: row);
-    transition: top 300ms;
+    transition: top 600ms;
     &__item {
         @extend %flexCenter;
     }
@@ -92,7 +92,7 @@
         position: absolute;
         flex-direction: column;
         gap: 26px;
-        top: -100%;
+        top: -200%;
         left: 0;
         width: 100%;
         height: 100vh;
