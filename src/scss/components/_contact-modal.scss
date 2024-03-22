@@ -7,7 +7,7 @@
     left: 0;
     opacity: 0;
     @extend %flexCenter;
-    transition: opacity 900ms, top 300ms;
+    transition: opacity 1000ms, top 300ms;
 }
 .contact-modal {
     background-color: #fff;
